@@ -1,0 +1,59 @@
+{% extends 'Blog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div class="container-fluid">
+    <main class="tm-main">
+        <div class="row tm-row">
+            <div class="col-12">
+                <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                    <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                    <button class="tm-search-button" type="submit">
+                        <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                    </button>                                
+                </form>
+            </div>                
+        </div>            
+        <div class="row tm-row tm-mb-45">
+            <div class="col-12">
+                <hr class="tm-hr-primary tm-mb-55">
+            </div>
+        </div>           
+        <div class="row tm-row tm-mb-60"> 
+            <img src="imagenes/mi-cara.jpg" alt="imagen" class="img-fluid mr-4">              
+            <div class="col-lg-6 tm-mb-60 tm-person-col">
+                <div class="media tm-person">
+                    
+                    <div class="media-body">
+                        <h2 class="tm-color-primary tm-post-title mb-2">Nontué Antonella Aro</h2>
+                        <h3 class="tm-h3 mb-3">Creadora del Blog</h3>
+                        <p class="mb-0 tm-line-height-short">
+                            Mi nombre es Nontué Aro y tengo 27 años. Vivo en Villa Mercedes (Provincia de San Luis- Argentina). Soy profesora de matemáticas y en estos últimos tiempos me empecé a interesar en la programación y descubrí que es un viaje de ida nomás. Poder crear aquello que uno imagina, no tiene precio. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-12">
+            <hr class="tm-hr-primary  tm-mb-55">
+        </div> 
+        <div class="media-body">
+            <h2 class="tm-color-primary tm-post-title mb-2">Acerca del blog</h2>
+            <p class="mb-0 tm-line-height-short">
+                Este es un blog de viajes pensado para que las personas que aman viajar y conocer el mundo puedan compartir sus experiencias y aventuras en la web.
+            </p>
+        </div>
+        <br>
+        <footer class="row tm-row">
+            <hr class="col-12">
+            <div class="col-md-6 col-12 tm-color-gray">
+                By Nontué Aro
+            </div>
+            <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                Comisión: 31075 - Año 2022
+            </div>
+        </footer>         
+    </main>
+</div>
+{% endblock %}

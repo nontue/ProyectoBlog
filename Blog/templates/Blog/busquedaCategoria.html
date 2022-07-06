@@ -1,0 +1,18 @@
+{% extends 'Blog/padre.html' %}
+
+{% load static %}
+{% block header %}
+
+{% endblock%}
+
+{% block contenidoQueCambia %}
+<form action="/Blog/buscar/" method="GET"> {% csrf_token %}
+    <h1>Busqueda de categoría</h1>
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type="text" name="categoria" id="categoria" placeholder="Ingrese la categoría...">
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'Blog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h2>Todos los posteos</h2>
+<form method="POST"> {% csrf_token %}
+    ¿Estás seguro que deseas eliminar el post "{{object}}?
+    <input type="submit" value="Eliminar" >
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'Blog/padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+<div class="container-fluid">
+    <main class="tm-main">
+        <hr class="tm-hr-primary">
+        <div class="row tm-row">
+            <div class="col-12">
+                <form method="POST"> {% csrf_token %}
+                    <h2>Crear nuevo post</h2>
+                    <br>
+                    {{form.as_p}}
+                    <input type="submit" class="mb-2 tm-btn tm-btn-primary tm-prev-next" value="Publicar" >
+            </div>                
+        </div>  
+        <br>
+        <br>                    
+        
+        {% block footer %}
+        <footer class="row tm-row">
+            <hr class="col-12">
+            <div class="col-md-6 col-12 tm-color-gray">
+                By Nontué Aro
+            </div>
+            <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                Comisión: 31075 - Año 2022
+            </div>
+        </footer>
+        {% endblock %}
+    </main>
+
+
+
+{% endblock %}

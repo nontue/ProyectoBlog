@@ -1,0 +1,58 @@
+{% extends 'Blog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div class="container-fluid">
+    <main class="tm-main">
+        <!-- Search form -->
+        <div class="row tm-row">
+            <div class="col-12">
+                <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                    <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                    <button class="tm-search-button" type="submit">
+                        <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                    </button>                                
+                </form>
+            </div>                
+        </div>            
+        <div class="row tm-row">
+            <div class="col-12">
+                <hr class="tm-hr-primary tm-mb-55">
+            </div>
+        </div>
+        <div class="row tm-row">
+            <div class="col-lg-8 tm-post-col">
+                <div class="tm-post-full">                    
+                    <div class="mb-4">
+                        <h1 class="pt-2 tm-color-primary tm-post-title">{{post.titulo}}</h1>
+                        <p class="tm-mb-40">{{post.fecha}} by {{post.autor}}</p>
+                        <p>
+                            {{post.contenido}}
+                        </p>
+                        <span class="d-block text-right tm-color-primary">Categoría: {{post.categoria}}</span>
+                    </div>
+                    <p>
+                        <a href="{% url 'post_list' %}" class="mb-2 tm-btn tm-btn-primary tm-prev-next">Volver atrás</a>
+                    </p>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <br>
+        <footer class="row tm-row">
+            <hr class="col-12">
+            <div class="col-md-6 col-12 tm-color-gray">
+                By Nontué Aro
+            </div>
+            <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                Comisión: 31075 - Año 2022
+            </div>
+        </footer>
+    </main>
+</div>
+
+
+
+{% endblock %}
